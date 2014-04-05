@@ -18,7 +18,8 @@ var ball = {
 	},
 	direction: function() {
 				// Lots of math
-		
+				// Put ball in random direction
+				
 		
 	},
 	
@@ -99,7 +100,6 @@ var player2 = {
 };
 
 // Game loop draw function
-
 function draw() {
     ctx.clearRect( 0, 0, canvas.width, canvas.height );
     player1.draw();
@@ -108,20 +108,16 @@ function draw() {
 
 }
 
-
-
 // Game loop update function
 function update() {
     player1.update();
 	player2.update();
 	ball.update();
-
 }
 
 function tick() {
     draw();
     update();
-
 }
 
 setInterval( tick, 1000 / FPS );
